@@ -21,3 +21,7 @@ flutter run
 
 And that's it! You should see the following:
 ![](resume_snapshot.png)
+
+
+# Disclaimer!
+Actual code quality here is not great for a Flutter app (this was my first real shot at playing around with Flutter)
