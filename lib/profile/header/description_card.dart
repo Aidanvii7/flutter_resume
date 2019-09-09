@@ -16,7 +16,7 @@ Enjoys exchanging knowledge with other team members in technical discussions and
 Recognition at Droidcon NYC 2017 and Droidcon Berlin 2018 for published android development articles on Medium.
 Enjoys learning new mobile technologies outside of pure native android development such as Flutter and Dart.
 Experienced in working with Agile development workflows such as Scrum and Kanban.
-""".replaceAll('\n', '');
+""".replaceAll('\n', ' ');
 
 @widget
 Widget descriptionCard(BuildContext context) {
