@@ -8,7 +8,7 @@ class Lifecycle extends StatefulWidget {
   final Function onResumed;
   final Function onInactive;
   final Function onPaused;
-  final Function onSuspended;
+  final Function onDetached;
 
   const Lifecycle({Key key,
     this.child,
@@ -17,7 +17,7 @@ class Lifecycle extends StatefulWidget {
     this.onResumed,
     this.onInactive,
     this.onPaused,
-    this.onSuspended
+    this.onDetached
   }) : super(key: key);
 
   @override
@@ -51,8 +51,8 @@ class _LifecycleState extends State<Lifecycle> with WidgetsBindingObserver {
       case AppLifecycleState.resumed:
         widget.onResumed?.call();
         break;
-      case AppLifecycleState.suspending:
-        widget.onSuspended?.call();
+      case AppLifecycleState.detached:
+        widget.onDetached?.call();
         break;
     }
 

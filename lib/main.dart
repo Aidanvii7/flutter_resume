@@ -20,6 +20,7 @@ import 'package:flutter_resume/resume_app.dart';
 
 void main() {
   debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
+  WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setEnabledSystemUIOverlays([]);
   SystemChrome
       .setPreferredOrientations([DeviceOrientation.portraitUp])
