@@ -13,7 +13,7 @@ Widget workCard(final BuildContext context) {
     timelineEntries: const <TimelineEntry>[
       TimelineEntry(
         place: 'SportTotal.tv',
-        fromTo: "April 2018 - Present",
+        fromTo: "April 2018 - October 2019",
         title: 'Senior Android Engineer',
         bulletPoints: <String>[
           'Worked as part of a small co-located agile team to build a new mobile and tablet app from the ground up.',
