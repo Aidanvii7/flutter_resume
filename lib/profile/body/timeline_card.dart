@@ -11,7 +11,8 @@ const int FLEX_TITLE = 20;
 const int FLEX_DATE = 16;
 
 @widget
-Widget timelineEntry(final BuildContext context, {
+Widget timelineEntry(
+  final BuildContext context, {
   @required final String place,
   @required final String fromTo,
   @required final String title,
@@ -37,7 +38,8 @@ Widget timelineEntry(final BuildContext context, {
 }
 
 @widget
-Widget _headerRow(final BuildContext context, {
+Widget _headerRow(
+  final BuildContext context, {
   @required final String place,
   @required final String fromTo,
   @required final String title,
@@ -51,7 +53,8 @@ Widget _headerRow(final BuildContext context, {
       children: <Widget>[
         _Indicator(),
         _Place(place),
-        _TitleColumn(title,
+        _TitleColumn(
+          title,
           highlight: highlight,
         ),
         _FromToDate(fromTo)
@@ -70,8 +73,7 @@ Widget _indicator(final BuildContext context) {
           height: R.FAB_TIMELINE_SIZE,
           child: FloatingActionButton(
             backgroundColor: accentColor(context),
-          )
-      ));
+          )));
 }
 
 @widget
@@ -79,16 +81,12 @@ Widget _place(final BuildContext context, final String place) {
   assert(context != null && place != null);
   return Expanded(
     flex: FLEX_PLACE,
-    child: Text(place,
-        style: titleTextStyleFromContext(context)
-    ),
+    child: Text(place, style: titleTextStyleFromContext(context)),
   );
 }
 
 @widget
-Widget _titleColumn(final BuildContext context, final String title, {
-  final String highlight
-}) {
+Widget _titleColumn(final BuildContext context, final String title, {final String highlight}) {
   assert(context != null && title != null);
   if (highlight != null) {
     return Expanded(
@@ -118,7 +116,8 @@ Widget _titleColumn(final BuildContext context, final String title, {
 @widget
 Widget _title(final BuildContext context, final String title) {
   assert(context != null && title != null);
-  return Text(title,
+  return Text(
+    title,
     style: titleTextStyleFromContext(context),
   );
 }
@@ -126,7 +125,8 @@ Widget _title(final BuildContext context, final String title) {
 @widget
 Widget _highlight(final BuildContext context, final String highlight) {
   assert(context != null && highlight != null);
-  return Text(highlight,
+  return Text(
+    highlight,
     style: highlightedSubtitleTextStyleFromContext(context),
   );
 }
@@ -136,10 +136,7 @@ Widget _fromToDate(final BuildContext context, final String fromTo) {
   assert(context != null && fromTo != null);
   return Expanded(
     flex: FLEX_DATE,
-    child: Text(fromTo,
-        textAlign: TextAlign.right,
-        style: highlightedSubtitleTextStyleFromContext(context)
-    ), //
+    child: Text(fromTo, textAlign: TextAlign.right, style: highlightedSubtitleTextStyleFromContext(context)), //
   );
 }
 
@@ -170,12 +167,10 @@ Widget _bulletPoint(final BuildContext context, final String bulletPoint) {
                 child: FloatingActionButton(
                   backgroundColor: Colors.black,
                   elevation: 2,
-                )
-            )
-        ),
+                ))),
         Flexible(
           child: Text(bulletPoint, style: body1TextStyleFromContext(context)),
-        )
+        ),
       ],
     ),
   );
@@ -195,7 +190,8 @@ Widget _separatorLine(final BuildContext context) {
 }
 
 @widget
-Widget timelineCard(BuildContext context, {
+Widget timelineCard(
+  BuildContext context, {
   @required final String title,
   final List<TimelineEntry> timelineEntries,
   @required final double indicatorLength,
@@ -205,10 +201,7 @@ Widget timelineCard(BuildContext context, {
     child: Padding(
       padding: EdgeInsets.fromLTRB(R.MARGIN_CARD, 0, R.MARGIN_CARD, R.MARGIN_CARD),
       child: Stack(
-        children: <Widget>[
-          _IndicatorLine(indicatorLength),
-          _Entries(timelineEntries)
-        ],
+        children: <Widget>[_IndicatorLine(indicatorLength), _Entries(timelineEntries)],
       ),
     ),
   );
@@ -241,8 +234,8 @@ Widget _indicatorLine(final BuildContext context, final double indicatorLength) 
 Widget _entries(final BuildContext context, final List<TimelineEntry> timelineEntries) {
   assert(context != null && timelineEntries != null);
   return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: timelineEntries //_timelineEntriesWithTitle(context),
+    mainAxisAlignment: MainAxisAlignment.start,
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: timelineEntries, //_timelineEntriesWithTitle(context),
   );
 }

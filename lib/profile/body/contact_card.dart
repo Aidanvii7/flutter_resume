@@ -21,7 +21,7 @@ Widget _contactEntries(final BuildContext context) {
     children: <Widget>[
       _ContactEntry(
           title: 'Mobile',
-          info: '+49 176 214 18647',
+          info: '+44 73689 22469',
           iconData: Icons.phone,
       ),
       _ContactEntry(
@@ -31,7 +31,7 @@ Widget _contactEntries(final BuildContext context) {
       ),
       _ContactEntry(
           title: 'Location',
-          info: 'Berlin, Germany',
+          info: 'Glasgow, UK',
           iconData: Icons.location_on,
       ),
       _ContactEntry(

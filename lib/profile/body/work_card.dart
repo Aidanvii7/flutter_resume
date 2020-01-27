@@ -9,11 +9,20 @@ Widget workCard(final BuildContext context) {
   assert(context != null);
   return TimelineCard(
     title: 'Experience',
-    indicatorLength: 960,
+    indicatorLength: 1090,
     timelineEntries: const <TimelineEntry>[
       TimelineEntry(
+        place: 'Digital Barriers',
+        fromTo: "Jan 2020 - Apr 2020",
+        title: 'Software Engineer',
+        bulletPoints: <String>[
+          'Adding new features to the EdgeVis Client app for Android.',
+          'Working with Windows and iOS to ensure feature parity across client software.'
+        ],
+      ),
+      TimelineEntry(
         place: 'SportTotal.tv',
-        fromTo: "April 2018 - October 2019",
+        fromTo: "Apr 2018 - Oct 2019",
         title: 'Senior Android Engineer',
         bulletPoints: <String>[
           'Worked as part of a small co-located agile team to build a new mobile and tablet app from the ground up.',
@@ -25,7 +34,7 @@ Widget workCard(final BuildContext context) {
       ),
       TimelineEntry(
         place: "Viacom",
-        fromTo: "June 2016 - March 2018",
+        fromTo: "Jun 2016 - Mar 2018",
         title: 'Android Engineer',
         bulletPoints: <String>[
           'Worked as part of a large distributed agile team. First on the Nickelodeon app for kids, later on a global app platform that covers multiple Viacom brands such as MTV, Comedy Central, VH1, BET, Spike and Paramount.',
