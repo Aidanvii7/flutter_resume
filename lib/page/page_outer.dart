@@ -6,9 +6,9 @@ import 'package:flutter_resume/utils.dart';
 
 part 'page_outer.g.dart';
 
-const double _PAGE_LEFT_RIGHT_MARGIN_PERCENT = 0.02;
-const double _PAGE_TOP_MARGIN_PERCENT = 0.02;
-const double _PAGE_BOTTOM_MARGIN_PERCENT = 0.02;
+const double _PAGE_LEFT_RIGHT_MARGIN_PERCENT = 0.05;
+const double _PAGE_TOP_MARGIN_PERCENT = 0.04;
+const double _PAGE_BOTTOM_MARGIN_PERCENT = 0.04;
 const double _A4_ASPECT_RATIO = 1.0 / 1.414;
 
 @widget
@@ -16,7 +16,8 @@ Widget pageOuter(final BuildContext context) => _PageChrome();
 
 @widget
 Widget _pageChrome(final BuildContext context) {
-  final marginLeftRight = percentageOfScreenWidth(context, _PAGE_LEFT_RIGHT_MARGIN_PERCENT);
+  final marginLeftRight =
+      percentageOfScreenWidth(context, _PAGE_LEFT_RIGHT_MARGIN_PERCENT);
   return Stack(
     children: <Widget>[
       Container(
@@ -26,10 +27,11 @@ Widget _pageChrome(final BuildContext context) {
             left: marginLeftRight,
             top: percentageOfScreenHeight(context, _PAGE_TOP_MARGIN_PERCENT),
             right: marginLeftRight,
-            bottom: percentageOfScreenHeight(context, _PAGE_BOTTOM_MARGIN_PERCENT)),
+            bottom:
+                percentageOfScreenHeight(context, _PAGE_BOTTOM_MARGIN_PERCENT)),
         child: _PageContent(),
       ),
-//      BuiltWithFlutter(),
+      BuiltWithFlutter(),
     ],
   );
 }
@@ -51,7 +53,8 @@ Widget builtWithFlutter(final BuildContext context) {
         children: <Widget>[
           Text(
             'Built with Flutter',
-            style: titleTextStyleFromContext(context).copyWith(color: Colors.grey[700]),
+            style: titleTextStyleFromContext(context)
+                .copyWith(color: Colors.grey[700]),
           ),
           SizedBox(
             width: 60,

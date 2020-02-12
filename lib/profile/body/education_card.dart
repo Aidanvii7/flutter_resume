@@ -33,7 +33,6 @@ Widget educationCard(final BuildContext context) {
         title: 'HNC Game Development',
         highlight: 'Grade A',
         bulletPoints: <String>[
-          "Enhancing the Wii's motion tracking capabilities",
           'Key subjects: OOP with Java, Structured programming with Basic',
         ],
       ),

@@ -9,9 +9,9 @@ Widget workCard(final BuildContext context) {
   assert(context != null);
   return TimelineCard(
     title: 'Experience',
-    indicatorLength: 1090,
+    indicatorLength: 960,
     timelineEntries: const <TimelineEntry>[
-      TimelineEntry(
+/*      TimelineEntry(
         place: 'Digital Barriers',
         fromTo: "Jan 2020 - Apr 2020",
         title: 'Software Engineer',
@@ -19,7 +19,7 @@ Widget workCard(final BuildContext context) {
           'Adding new features to the EdgeVis Client app for Android.',
           'Working with Windows and iOS to ensure feature parity across client software.'
         ],
-      ),
+      ),*/
       TimelineEntry(
         place: 'SportTotal.tv',
         fromTo: "Apr 2018 - Oct 2019",

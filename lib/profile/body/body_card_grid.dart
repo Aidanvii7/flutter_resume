@@ -41,7 +41,7 @@ Widget _mainColumn(final BuildContext context) {
 Widget _workCard(final BuildContext context) {
   assert(context != null);
   return Expanded(
-    flex:17,
+    flex: 15,
     child: Padding(
       padding: EdgeInsets.all(R.PADDING_CARD),
       child: WorkCard(),

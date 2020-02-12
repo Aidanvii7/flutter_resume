@@ -62,7 +62,7 @@ List<Widget> _buildArchitectureSection(final BuildContext context) {
     ),
     _SkillEntry(
       name: 'Room',
-      level: 50,
+      level: 65,
     )
   ];
 }
@@ -102,11 +102,11 @@ List<Widget> _buildThirdPartySection(final BuildContext context) {
     ),
     _SkillEntry(
       name: 'Kotlin Coroutines',
-      level: 60,
+      level: 70,
     ),
     _SkillEntry(
       name: 'RxJava',
-      level: 75,
+      level: 60,
     )
   ];
 }
